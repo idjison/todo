@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="EUC-KR"%>
 <%@ page import = "java.sql.*" %>
+
 <%
 	Statement stmt = null;
 	ResultSet rs = null;
@@ -38,8 +39,12 @@
 
 <br>
 <form name = "todoForm" method = "post" action = "write.jsp">
-<input type = "text" name = "todo-item" size = "20" value = "111"></input>
+<input type = "text" name = "todo-item" size = "20" ></input>
 <input type = "submit" value = "작성"></input>
+</form>
+<br>
+<form name = "delete" method = "post" action = "delete.jsp">
+<input type = "submit" name = "delete" value = "모두 삭제"></input>
 </form>
 </div>
 </body>
