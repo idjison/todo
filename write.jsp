@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="utf-8"%>
     <%@ page import="java.sql.*" %>
     
 <%
 	Statement stmt = null;
 	ResultSet rs = null;
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/todos?characterEncoding=utf8&serverTimezone=UTC&useUnicode=true", "root", "cs1234");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/todos?serverTimezone=UTC", "root", "id*2041427");
 	request.setCharacterEncoding("utf-8");
 	String item = request.getParameter("todo-item");
 	String sql = "insert into todo(item) values('" + item + "')";  
@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
